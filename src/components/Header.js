@@ -4,8 +4,8 @@ import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 
-
-function Header() {
+// can also use {user} to destruct props
+function Header(props) {
     return (
         <Container>
             <Main>
@@ -19,10 +19,11 @@ function Header() {
             </Main>
             <UserContainer>
                 <Name>
-                    Brandon
+                    {props.user.name}
                 </Name>
                 <UserImage>
-                    <img src= "https://i.imgur.com/6VBx3io.png"/>
+                    {/* check to see if the user photo exists */}
+                    <img src= {props.user.photo ? props.user.photo :"https://i.imgur.com/6VBx3io.png"}/>
                 </UserImage>
             </UserContainer>
         </Container>
