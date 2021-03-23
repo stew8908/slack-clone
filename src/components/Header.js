@@ -21,7 +21,7 @@ function Header(props) {
                 <Name>
                     {props.user.name}
                 </Name>
-                <UserImage>
+                <UserImage onClick={props.signOut}>
                     {/* check to see if the user photo exists */}
                     <img src= {props.user.photo ? props.user.photo :"https://i.imgur.com/6VBx3io.png"}/>
                 </UserImage>
@@ -87,8 +87,8 @@ const UserImage = styled.div`
     width: 20px;
     height:20px;
     border: 2px solid;
-
     border-radius: 3px;
+    cursor: pointer;
  img{
     width: 100%;
  } 
