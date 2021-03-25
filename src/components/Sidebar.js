@@ -10,7 +10,7 @@ function Sidebar(props) {
     const history = useHistory();
     const gotoChannel = (id) => {
         if(id){
-            console.log(id);
+            console.log('pushing ' +id);
             history.push(`/room/${id}`);
         }
     }

@@ -48,7 +48,7 @@ function App() {
           <Sidebar rooms={rooms}/>
           <Switch>
             <Route path="/room/:channelId">
-              <Chat/>
+              <Chat user={user}/>
             </Route>
             <Route path="/">
               Select or Create a channel
@@ -73,5 +73,5 @@ grid-template-rows: 38px auto;
 `// why do we need `` here
 const Main = styled.div`
 display: grid;
-grid-template-columns: 260px auto;
+grid-template-columns: 260px minmax(0 ,1fr);
 `
